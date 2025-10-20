@@ -267,7 +267,7 @@ def menu():
         print(gradient("       ╠══════════════════════════════════════╣"))
         print(gradient("       ║ 1   •> Rải tin nhắn nhiều nhóm       ║"))
         print(gradient("       ║ 2   •> Treo ngôn.                    ║"))
-        print(gradient("       ║ 2.1 •> Treo ngôn theo tên            ║"))
+        print(gradient("       ║ 6  •> Treo ngôn theo tên            ║"))
         print(gradient("       ║ 3   •> Gửi spam lag (code)           ║"))
         print(gradient("       ║ 4   •> Gửi Unicode tàng hình         ║"))
         print(gradient("       ║ 5   •> Thoát                         ║"))
@@ -316,7 +316,7 @@ def menu():
 ╰─➤  """))
             spam_unicode_invisible(cookie, delay, thread_id)
             
-        elif choice == "2.1":
+        elif choice == "6":
             thread_id = input(gradient_tutu("""\n╭─────[ Nhập ID Nhóm ] - [ DarkNess -   Anh Quý ]
 │ 
 ╰─➤  """))
