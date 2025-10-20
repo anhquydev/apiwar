@@ -174,6 +174,33 @@ def spam_treo_ngon(cookie, delay, thread_id, message_file):
         index += 1
         time.sleep(delay)
 
+def spam_treo_ngon_theo_name(cookie, delay, thread_id, message_file, name):
+    # Lấy user_id giống như spam_treo_ngon
+    user_id = get_user_id(cookie)
+    if not user_id:
+        print("❌ Không thể lấy user_id. Kiểm tra lại cookie!")
+        return
+
+    # Đọc file ngôn
+    with open(message_file, "r", encoding="utf-8") as file:
+        messages = file.read().splitlines()
+
+    print(f" Bắt Đầu Treo Ngôn Theo Tên '{name}' Vào Nhóm {thread_id} (delay {delay}s)")
+
+    # Lặp vô hạn như spam_treo_ngon
+    while True:
+        for message in messages:
+            # Thay {name} bằng tên người dùng nhập
+            message = message.replace("{name}", name)
+
+            ok = send_message(cookie, user_id, thread_id, message)
+            if ok:
+                print(f"Messager: {message}\nThread ID: {thread_id}")
+            else:
+                print("❌ Gửi thất bại! Kiểm tra cookie hoặc kết nối mạng.")
+
+            time.sleep(delay)
+
 def spam_lag_in_code(cookie, delay, thread_id):
     user_id = get_user_id(cookie)
     index = 0
