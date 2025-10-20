@@ -155,7 +155,7 @@ def spam_all_groups(cookie, delay):
             ok = send_message(cookie, user_id, thread_id, message)
             print(f"\033[1;36mMessager: \033[1;33m\"{message}\"\n\033[1;36mNhóm: \033[1;33m{thread_id}")
             time.sleep(delay)
-
+            
 def spam_treo_ngon(cookie, delay, thread_id, message_file):
     try:
         with open(message_file, "r", encoding="utf-8") as f:
@@ -265,12 +265,12 @@ def menu():
         print(gradient("       ╔══════════════════════════════════════╗"))
         print(gradient("       ║             🛡️ COMMAND 🛡️              ║"))
         print(gradient("       ╠══════════════════════════════════════╣"))
-        print(gradient("       ║ 1   •> Rải tin nhắn nhiều nhóm       ║"))
-        print(gradient("       ║ 2   •> Treo ngôn.                    ║"))
-        print(gradient("       ║ 6  •> Treo ngôn theo tên            ║"))
-        print(gradient("       ║ 3   •> Gửi spam lag (code)           ║"))
-        print(gradient("       ║ 4   •> Gửi Unicode tàng hình         ║"))
-        print(gradient("       ║ 5   •> Thoát                         ║"))
+        print(gradient("       ║ 1. Rải tin nhắn nhiều nhóm           ║"))
+        print(gradient("       ║ 2. Treo ngôn 1 nhóm                  ║"))
+        print(gradient("       ║ 2.1 Treo ngôn 1 nhóm                  ║"))
+        print(gradient("       ║ 3. Gửi spam lag (code)               ║"))
+        print(gradient("       ║ 4. Gửi Unicode tàng hình             ║"))
+        print(gradient("       ║ 5. Thoát                             ║"))
         print(gradient("       ╚══════════════════════════════════════╝"))
         print("    \033[1;31m ╚═                                        ═╝")
         choice = input(gradient_tutu("""╭───[ Nhập Lựa Chọn ] • [ DarkNess -   Anh Quý ]
@@ -316,11 +316,17 @@ def menu():
 ╰─➤  """))
             spam_unicode_invisible(cookie, delay, thread_id)
             
-        elif choice == "6":
+        elif choice == "2.1":
             thread_id = input(gradient_tutu("""\n╭─────[ Nhập ID Nhóm ] - [ DarkNess -   Anh Quý ]
 │ 
 ╰─➤  """))
-
+            message_file = input_with_box(gradient_tutu("""\n╭─────[ Nhập File Chứa Ngôn ] - [ DarkNess -   Anh Quý ]
+│ 
+╰─➤   """))
+            name = input_with_box(gradient_tutu("""\n╭─────[ Nhập Tên Cần Treo ] - [ DarkNess -   Anh Quý ]
+│ 
+╰─➤   """))
+            spam_treo_ngon_theo_name(cookie, delay, thread_id, message_file, name)
         else:
             print("\033[1;31m❌ Lựa chọn không hợp lệ!")
 
