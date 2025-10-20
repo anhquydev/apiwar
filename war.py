@@ -266,10 +266,11 @@ def menu():
         print(gradient("       ║             🛡️ COMMAND 🛡️              ║"))
         print(gradient("       ╠══════════════════════════════════════╣"))
         print(gradient("       ║ 1. Rải tin nhắn nhiều nhóm           ║"))
-        print(gradient("       ║ 2. Treo ngôn 1 nhóm                  ║"))
+        print(gradient("       ║ 2. Treo ngôn.                        ║"))
         print(gradient("       ║ 3. Gửi spam lag (code)               ║"))
         print(gradient("       ║ 4. Gửi Unicode tàng hình             ║"))
-        print(gradient("       ║ 5. Thoát                             ║"))
+        print(gradient("       ║ 5. Treo ngôn theo tên                ║"))
+        print(gradient("       ║ 6. Thoát                             ║"))
         print(gradient("       ╚══════════════════════════════════════╝"))
         print("    \033[1;31m ╚═                                        ═╝")
         choice = input(gradient_tutu("""╭───[ Nhập Lựa Chọn ] • [ DarkNess -   Anh Quý ]
@@ -314,6 +315,11 @@ def menu():
 │ 
 ╰─➤  """))
             spam_unicode_invisible(cookie, delay, thread_id)
+            
+        elif choice == "5":
+            thread_id = input(gradient_tutu("""\n╭─────[ Nhập ID Nhóm ] - [ DarkNess -   Anh Quý ]
+│ 
+╰─➤  """))
 
         else:
             print("\033[1;31m❌ Lựa chọn không hợp lệ!")
