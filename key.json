@@ -1,0 +1,22 @@
+{
+  "keys": [
+    {
+      "key": "Aq135208@",
+      "user": "Hoang Minh Quy",
+      "type": "VIP",
+      "expire": "2099-12-31"
+    },
+    {
+      "key": "Key2025Free",
+      "user": "Nguyen Van A",
+      "type": "FREE",
+      "expire": "2025-12-31"
+    },
+    {
+      "key": "ProKey123",
+      "user": "Tester",
+      "type": "PRO",
+      "expire": "2026-05-10"
+    }
+  ]
+}
