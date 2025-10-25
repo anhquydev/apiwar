@@ -267,7 +267,7 @@ def menu():
         print(gradient("       ╠══════════════════════════════════════╣"))
         print(gradient("       ║ 1   •> Rải tin nhắn nhiều nhóm       ║"))
         print(gradient("       ║ 2   •> Treo ngôn 1 nhóm              ║"))
-        print(gradient("       ║ 2.1 •> Treo ngôn 1 nhóm              ║"))
+        print(gradient("       ║ 2.1 •> Treo ngôn réo tên 1 nhóm      ║"))
         print(gradient("       ║ 3   •> Gửi spam lag (code)           ║"))
         print(gradient("       ║ 4   •> Gửi Unicode tàng hình         ║"))
         print(gradient("       ║ 5   •> Thoát                         ║"))
