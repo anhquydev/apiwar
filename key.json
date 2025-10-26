@@ -6,6 +6,11 @@
       "type": "ADMIN",
       "expire": "2099-12-31"
     },
+    {
+      "key": "admindev",
+      "user": "Hoàng Minh Quý",
+      "type": "ADMIN",
+      "expire": "2099-12-31"
     }
   ]
 }
